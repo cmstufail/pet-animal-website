@@ -27,6 +27,14 @@
       .font-adlam {
         font-family: "ADLaM Display", serif;
       }
+
+      .horizontal-rule {
+        border: none;
+        height: 1px;
+        background: gray;
+        width: 499px;
+        margin-left: -20px;
+      }
     </style>
 
     <script>
@@ -35,7 +43,7 @@
           extend: {
             colors: {
               clifford: "#da373d",
-              "bike-primary": "#E76F51",
+              "primary-color": "rgb(255	220	38)",
               "bike-primary-bg": "rgba(231, 111, 81, 0.1)",
             },
           },
@@ -44,11 +52,109 @@
     </script>
   </head>
 
-  <body>
+  <body class="font-sora">
     <!-- Header Section Start -->
-    <header>
+    <header class="w-11/12 mx-auto">
       <!-- Navbar Start -->
-      <nav></nav>
+      <nav class="mb-28 md:mb-8">
+        <div class="navbar bg-base-100 cursor-pointer bg-[rgb(255, 249, 244)]">
+          <div class="navbar-start">
+            <img src="./c1-assets/logo-header.png" alt="nav-logo image" />
+            <a class="font-bold text-2xl pl-3"
+              >Browse<span class="text-primary-color">4</span>Pets</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal text-lg px-1">
+              <li><a>Find a pet</a></li>
+              <li><a>Breeds</a></li>
+              <li><a>Contact us</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button class="btn btn-ghost btn-circle hidden md:inline-flex">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                  />
+                </svg>
+              </div>
+            </button>
+            <button class="btn btn-ghost btn-circle hidden md:inline-flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+
+            <a
+              class="btn hidden md:inline-flex border border-primary-color bg-transparent ml-3 text-lg"
+              >Login</a
+            >
+            <a class="btn hidden md:inline-flex bg-primary-color ml-3 text-lg"
+              >Register</a
+            >
+            <div class="dropdown relative">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block h-5 w-5 stroke-current"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] w-36 mt-3 p-2 absolute -left-40 top-0"
+              >
+                <li
+                  class="border border-b-gray-600 w-full text-center rounded-lg mb-2"
+                >
+                  <a class="justify-center">Find a pet</a>
+                </li>
+                <li
+                  class="border border-b-gray-600 w-full text-center rounded-lg mb-2"
+                >
+                  <a class="justify-center">Breeds</a>
+                </li>
+                <li
+                  class="border border-b-gray-600 w-full text-center rounded-lg mb-2"
+                >
+                  <a class="justify-center">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <hr class="horizontal-rule -mt-20 md:hidden">
 
       <!-- Banner Start -->
     </header>
