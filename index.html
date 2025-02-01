@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pet Animal Website</title>
+
+    <!-- Fontawesime CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,9 +42,16 @@
         border: none;
         height: 1px;
         background: gray;
-        width: 499px;
-        margin-left: -20px;
+        /* width: 499px; */
+        /* margin-left: -20px; */
         margin-bottom: 50px;
+      }
+
+      .banner {
+        min-height: 70vh;
+        background-image: url("./c1-assets/cat-big.png");
+        background-size: 100% 100%;
+        background-position: cover;
       }
     </style>
 
@@ -57,7 +74,7 @@
     <!-- Header Section Start -->
     <header class="w-11/12 mx-auto">
       <!-- Navbar Start -->
-      <nav class="mb-28 lg:mb-16 relative z-50">
+      <nav class="mb-28 lg:mb-16">
         <div class="navbar bg-base-100 cursor-pointer bg-[rgb(255, 249, 244)]">
           <div class="navbar-start">
             <img src="./c1-assets/logo-header.png" alt="nav-logo image" />
@@ -115,7 +132,7 @@
             <a class="btn hidden md:inline-flex bg-primary-color ml-3 text-lg"
               >Register</a
             >
-            <div class="dropdown relative">
+            <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -158,28 +175,18 @@
       <hr class="horizontal-rule -mt-20 md:hidden" />
 
       <!-- Banner Start -->
-      <div class="border border-red-500">
-        <div class="">
-          <div class="relative z-40">
-            <h3 class="text-5xl font-font-adlam leading-snug">
-              Pamper Your Pet,<br />
-              Because They Deserve <br />
-              the Bes
-            </h3>
-            <p>
-              Discover a world of treats, toys, and essentials handpicked for
-              <br />
-              your furry friends. Shop now and make tails wag with joy!
-            </p>
-            <a class="btn hidden md:inline-flex bg-primary-color text-lg"
-              >Find a pet</a
-            >
-          </div>
-          <img
-            src="./c1-assets/cat-big.png"
-            class="absolute bottom-4 z-0 w-10/12 lg:w-11/12 lg:h-screen"
-          />
-        </div>
+      <div class="banner">
+        <h3 class="text-3xl lg:text-5xl font-adlam">
+          Pamper Your Pet,<br />
+          Because They Deserve <br />
+          the Bes
+        </h3>
+        <p class="pb-6 w-80 lg:w-full">
+          Discover a world of treats, toys, and essentials handpicked for
+          <br />
+          your furry friends. Shop now and make tails wag with joy!
+        </p>
+        <a class="btn md:inline-flex bg-primary-color text-lg">Find a pet</a>
       </div>
     </header>
 
@@ -718,12 +725,17 @@
         <h3 class="text-4xl font-adlam my-12">Everyday Low Price</h3>
         <div class="md:flex md:gap-3">
           <!-- Card 1 -->
-          <div class="card bg-primary-color rounded-lg md:w-8/12">
-            <div class="h-[400px] flex md:items-center justify-between pt-14 md:pt-0">
+          <!-- [#bed0fd] to-[#f6ccfb] -->
+          <div class="card md:w-8/12">
+            <div
+              class="h-[400px] flex md:items-center justify-between pt-14 md:pt-0 rounded-lg bg-gradient-to-bl from-[#bed0fa] to-[#f6ccfb]"
+            >
               <div class="pl-12 md:pl-18 pt-0">
                 <h3 class="hidden md:block pb-3">Under Price</h3>
                 <h2 class="text-2xl font-bold pb-2">Pet Grooming Mitt</h2>
-                <p class="pb-4 text-white hidden md:block">(Easy Hair Removal)</p>
+                <p class="pb-4 text-white hidden md:block">
+                  (Easy Hair Removal)
+                </p>
                 <p class="text-5xl font-adlam">#7.99</p>
               </div>
               <img
@@ -758,7 +770,43 @@
         </div>
       </section>
     </main>
+
     <!-- Footer Section Start -->
-    <footer></footer>
+    <footer class="bg-primary-color py-24">
+      <div
+        class="w-11/12 mx-auto -24 flex flex-col md:flex-row md:justify-between md:items-center"
+      >
+        <!-- Logo part -->
+        <div class="flex flex-col gap-5">
+          <div class="flex items-center">
+            <img src="./c1-assets/logo-footer.png" alt="footer Image" />
+            <a class="font-bold text-lg pl-3"
+              >Browse<span class="text-primary-color">4</span>Pets</a
+            >
+          </div>
+          <p class="text-gray-600 mb-10">
+            Discover a world of treats, toys, and <br />
+            essentials handpicked for your furry
+            friends
+          </p>
+        </div>
+
+        <!-- Navbar part -->
+        <ul class="mr-60 space-y-3">
+          <li><a class="text-lg" href="#">Find a pet</a></li>
+          <li><a class="text-lg" href="#">Breeds</a></li>
+          <li><a class="text-lg" href="#">Contact us</a></li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="mt-10">
+          <h3 class="text-lg mb-3">follow Us</h3>
+          <a href="#"><i class="pr-4 fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="pr-4 fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="pr-4 fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="pr-4 fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
